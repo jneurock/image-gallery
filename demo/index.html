@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Gallery Component</title>
+    <meta name="charset" content="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This is a demo page for an image
+      gallery web component. The purpose of the component is to provide a
+      simple means of building an image gallery without writing all the
+      boilerplate yourself.">
+    <link rel="stylesheet" href="assets/styles/demo.css">
+    <link rel="stylesheet" href="assets/styles/syntax.css">
+    <script src="assets/js/webcomponents-loader.js"></script>
+    <link rel="import" href="assets/templates/img-gallery.html">
+  </head>
+  <body>
+    <main>
+      <section class="content">
+        <h1>Image Gallery Component</h1>
+
+        <p>
+          <em>
+            Works in Chrome 57, Firefox 53 and Safari 10 in OSX Sierra. Feel
+            free to test in your browsers and systems and update this page.
+          </em>
+        </p>
+
+        <hr>
+
+        <p>
+          This is a demo page for an image gallery web component. The purpose of
+          the component is to provide a simple means of building an image gallery
+          without writing all the boilerplate yourself.
+        </p>
+
+        <p>
+          Something like...
+        </p>
+
+<pre><code class="html">&lt;img-gallery&gt;
+  &lt;img src="..." alt="..."&gt;
+  &lt;img src="..." alt="..."&gt;
+  &lt;img src="..." alt="..."&gt;
+&lt;/img-gallery&gt;
+</code></pre>
+
+        <h2>Demo</h2>
+      </section>
+
+      <img-gallery class="img-gallery-demo" back-label="&lt;" next-label="&gt;" transition-time="250">
+        <img src="http://lorempixel.com/640/480/nature/3" alt="Nature">
+        <img src="http://lorempixel.com/640/480/city/1" alt="City">
+        <img src="http://lorempixel.com/640/480/nightlife/4" alt="Night Life">
+        <img src="http://lorempixel.com/640/480/technics/1" alt="Technics">
+        <img src="http://lorempixel.com/640/480/people/1" alt="People">
+        <img src="http://lorempixel.com/640/480/business/1" alt="Business">
+        <img src="http://lorempixel.com/640/480/abstract/1" alt="Abstract">
+        <img src="http://lorempixel.com/640/480/animals/1" alt="Animals">
+      </img-gallery>
+
+      <section class="content">
+        <hr>
+
+        <p>
+          The above demo shows an exmaple of custom styling for the component.
+          By default, no styles are included; however, the component template is
+          marked up in a way that provides fine control over all aspects of
+          styling. See <strong>The component template</strong> below for a
+          rendered markup reference.
+        </p>
+
+        <h3>Usage</h3>
+
+        <p>
+          Below is the source for the above component from this page.
+        </p>
+
+<pre><code class="html">&lt;img-gallery class="img-gallery-demo" back-label="&lt;" next-label="&gt;" transition-time="250"&gt;
+  &lt;img src="http://lorempixel.com/640/480/nature/3" alt="Nature"&gt;
+  &lt;img src="http://lorempixel.com/640/480/city/1" alt="City"&gt;
+  &lt;img src="http://lorempixel.com/640/480/nightlife/4" alt="Night Life"&gt;
+  &lt;img src="http://lorempixel.com/640/480/technics/1" alt="Technics"&gt;
+  &lt;img src="http://lorempixel.com/640/480/people/1" alt="People"&gt;
+  &lt;img src="http://lorempixel.com/640/480/business/1" alt="Business"&gt;
+  &lt;img src="http://lorempixel.com/640/480/abstract/1" alt="Abstract"&gt;
+  &lt;img src="http://lorempixel.com/640/480/animals/1" alt="Animals"&gt;
+&lt;/img-gallery&gt;
+</code></pre>
+
+        <h3>Component API</h3>
+
+        <div class="api">
+          <code>
+            <strong>no-deck</strong>
+            <span class="comment">// default: false</span>
+          </code>
+
+          <p>
+            This tells the component <em>not</em> to render the deck markup. This
+            allows you to use your own markup for the deck. It is encouraged to
+            use the same class names from the default template for your elements
+            so you don&rsquo;t have to recreate component functionality.
+          </p>
+
+          <code>
+            <strong>back-label</strong>
+            <span class="comment">// default: "Previous"</span>
+          </code>
+
+          <p>
+            This tells the component what the back button text should be.
+          </p>
+
+          <code>
+            <strong>next-label</strong>
+            <span class="comment">// default: "Next"</span>
+          </code>
+
+          <p>
+            This tells the component what the next button text should be.
+          </p>
+
+          <code>
+            <strong>transition-time</strong>
+            <span class="comment">// default: 0</span>
+          </code>
+
+          <p>
+            The time, in milliseconds, the component will wait before updating the
+            deck. Set this value to the same animation time you use in your CSS.
+          </p>
+        </div>
+
+        <h3>The component template</h3>
+
+        <p>
+          Below is a reference of the component&rsquo;s rendered template. Use
+          this as a guide for styling.
+        </p>
+
+<pre><code class="html">&lt;img-gallery&gt;
+  &lt;section class="img-gallery-deck"&gt;
+    &lt;section class="img-gallery-controls"&gt;
+      &lt;div class="img-gallery-controls-back"&gt;
+        &lt;button class="img-gallery-btn img-gallery-btn-back"&gt;Previous&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="img-gallery-deck-items"&gt;
+        &lt;img class="img-gallery-deck-img img-gallery-deck-back" src="" alt=""&gt;
+        &lt;img class="img-gallery-deck-img img-gallery-deck-current" src="" alt=""&gt;
+        &lt;img class="img-gallery-deck-img img-gallery-deck-next" src="" alt=""&gt;
+      &lt;/div&gt;
+      &lt;div class="img-gallery-controls-next"&gt;
+        &lt;button class="img-gallery-btn img-gallery-btn-next"&gt;Next&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;footer class="img-gallery-meta"&gt;
+      &lt;span class="img-gallery-meta-current"&gt;0&lt;/span&gt;
+      of
+      &lt;span class="img-gallery-meta-total"&gt;0&lt;/span&gt;
+    &lt;/footer&gt;
+  &lt;/section&gt;
+  &lt;section class="img-gallery-thumbs"&gt;
+    &lt;!-- your images will be rendered here --&gt;
+  &lt;/section&gt;
+&lt;/img-gallery&gt;
+</code></pre>
+
+        <h3>Extending the component</h3>
+
+        <p>
+          Since the gallery is a web component, it can be extended to create new
+          custom components that inherit its functionality. This would allow you
+          to implement your own versions of hooks like <code>next()</code>,
+          <code>click()</code> and <code>transformImageSource()</code> to name
+          a few.
+        </p>
+
+        <p>
+          For example, imagine you&rsquo;d like to transform a gallery image source
+          whenever its selected for display in the slide deck:
+        </p>
+
+<pre><code class="javascript">import ImgGallery from './path/to/img-gallery';
+
+class MyImgGallery extends ImgGallery {
+  // The thumbnail images are appended with "-tn". Remove this for full-size.
+  transformImageSource(img) {
+    return img.getAttribute('src').replace('-tn', '');
+  }
+}
+
+customElements.define('img-gallery', MyImgGallery);
+</code></pre>
+      </section>
+
+      <footer class="site-footer content">
+        <hr>
+
+        <p>
+          <em>
+            This component is free and open-source. If you&rsquo;d like to
+            improve it, please feel free to open issues and pull requests here:
+            <a href="https://github.com/jneurock/image-gallery" target="_blank">
+              https://github.com/jneurock/image-gallery
+            </a>.
+          </em>
+        </p>
+      </footer>
+    </main>
+
+    <script src="assets/js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      window.addEventListener('WebComponentsReady', function() {
+        let script = document.createElement('script');
+
+        script.src = 'assets/js/demo.js';
+
+        document.head.appendChild(script);
+      });
+    </script>
+  </body>
+</html>
