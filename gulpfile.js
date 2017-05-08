@@ -7,7 +7,8 @@ var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 
 gulp.task('html', function() {
-  return gulp.src('src/templates/img-gallery.html')
+  return gulp.src('src/components/img-gallery/template.html')
+    .pipe(rename('img-gallery.html'))
     .pipe(gulp.dest('demo/assets/templates'));
 })
 
