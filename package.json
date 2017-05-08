@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "babel-preset-modern-browsers": "^9.0.2",
+    "babelify": "^7.3.0",
+    "browserify": "^14.3.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "highlight.js": "^9.11.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "web-components": "git://github.com/webcomponents/webcomponentsjs#390737c"
+  }
+}
