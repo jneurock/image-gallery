@@ -1,0 +1,25 @@
+.img-gallery-demo {
+  .img-gallery-controls {
+    display: flex;
+    margin: 0 auto;
+    max-width: $img-width;
+
+    @media (min-width: #{$md-breakpoint}) {
+      max-width: $md-breakpoint;
+    }
+
+    @media (min-width: #{$lg-breakpoint}) {
+      max-width: $lg-breakpoint;
+    }
+  }
+
+  .img-gallery-controls-back,
+  .img-gallery-controls-next {
+    display: none;
+
+    @media (min-width: #{$md-breakpoint}) {
+      align-items: center;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.img-gallery-demo {
+  .img-gallery-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2.85rem;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0.5;
+    width: 40px;
+
+    &:disabled {
+      visibility: hidden;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

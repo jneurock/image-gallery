@@ -1,0 +1,14 @@
+$md-breakpoint: 480px;
+$lg-breakpoint: 720px;
+
+$img-height: 240px;
+$img-width: 320px;
+
+$md-img-height: 300px;
+$md-img-width: 400px;;
+
+$lg-img-height: 480px;
+$lg-img-width: 640px;
+
+@import "./base/html";
+@import "./components/img-gallery-demo";

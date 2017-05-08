@@ -1,0 +1,173 @@
+@mixin animated($animation-name) {
+  animation-duration: 250ms;
+  animation-fill-mode: both;
+  animation-name: $animation-name;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -$img-width;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -$img-width;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    left: $img-width;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: $img-width;
+  }
+}
+
+@media (min-width: #{$md-breakpoint}) {
+  @keyframes slideInLeft {
+    from {
+      left: -$md-img-width;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes slideOutLeft {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: -$md-img-width;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      left: $md-img-width;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes slideOutRight {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: $md-img-width;
+    }
+  }
+}
+
+@media (min-width: #{$lg-breakpoint}) {
+  @keyframes slideInLeft {
+    from {
+      left: -$lg-img-width;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes slideOutLeft {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: -$lg-img-width;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      left: $lg-img-width;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes slideOutRight {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: $lg-img-width;
+    }
+  }
+}
+
+.img-gallery-transition-in {
+  @include animated(fadeIn);
+}
+
+.img-gallery-transition-out {
+  @include animated(fadeOut);
+}
+
+.img-gallery-transition-left-in {
+  @include animated(slideInLeft);
+}
+
+.img-gallery-transition-left-out {
+  @include animated(slideOutLeft);
+}
+
+.img-gallery-transition-right-in {
+  @include animated(slideInRight);
+}
+
+.img-gallery-transition-right-out {
+  @include animated(slideOutRight);
+}

@@ -1,0 +1,69 @@
+html,
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;;
+  color: #454545;
+  font-family: sans-serif;
+  line-height: 1.3;
+}
+
+a,
+a:active,
+a:link {
+  color: #008080;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #3b0080;
+}
+
+code {
+  .comment {
+    color: #858585;
+  }
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.285rem;
+  line-height: 1.4;
+
+  .api & {
+    margin: 0.75rem 0 2rem;
+  }
+}
+
+pre {
+  overflow-x: auto;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: $lg-breakpoint;
+  padding: 0 20px;
+
+  @media (min-width: #{$lg-breakpoint}) {
+    padding: 0 40px;
+  }
+}
+
+.site-footer {
+  margin: 40px auto 20px;
+}
